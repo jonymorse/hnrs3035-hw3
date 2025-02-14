@@ -29,7 +29,7 @@ def num_tokens_from_string(string: str, model_name: str) -> int:
 model_name = "gpt-4o"  # ✅ Use GPT-4o-mini for better token limits
 
 # Prepare batch input file
-MAX_REQUESTS = 10  # ✅ Reduce batch size to avoid token limits
+MAX_REQUESTS = 500  # ✅ Reduce batch size to avoid token limits
 total_tokens = 0
 with open(batch_input_path, "w") as file:
     for idx, (question, response_data) in enumerate(zip(questions, responses)):
@@ -69,7 +69,7 @@ with open(batch_input_path, "w") as file:
                     {"role": "user", "content": user_message}
                 ],
                 "temperature": 0.0,  # ✅ Deterministic evaluation
-                "max_tokens": 50,  # ✅ Reduce max tokens
+                "max_tokens": 200,  # ✅ Reduce max tokens
                 "top_p": 1.0,
                 "response_format": {"type": "json_object"}  # ✅ Fixed format
             }

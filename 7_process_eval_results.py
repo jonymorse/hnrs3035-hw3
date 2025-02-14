@@ -3,7 +3,7 @@ import os
 
 # Paths
 DATA_DIR = "data"
-eval_results_path = os.path.join(DATA_DIR, "eval_batch_results.jsonl")
+eval_results_path = os.path.join(DATA_DIR, "eval_batch_results_0.jsonl")
 
 # Load JSONL file
 eval_results = []
