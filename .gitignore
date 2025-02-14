@@ -1,0 +1,21 @@
+# Ignore virtual environment
+venv/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore data and results
+/data/
+/_deprecated/
+error_analysis.py
+
+# Ignore environment dependencies
+requirements.txt
+
+# Ignore temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
